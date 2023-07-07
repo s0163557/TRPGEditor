@@ -4,18 +4,48 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRPGEditor"
-        xmlns:Properties="clr-namespace:TRPGEditor.Properties" x:Class="TRPGEditor.MainWindow"
+        xmlns:Properties="clr-namespace:TRPGEditor.Properties"
+        xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"    
+        xmlns:Views="clr-namespace:TRPGEditor.Views" x:Class="TRPGEditor.MainWindow"    
         mc:Ignorable="d"
-        Title="MainWindow" Height="489" Width="800">
+        Title="MainWindow" Height="500" Width="800">
+
+    <Window.DataContext>
+        <viewModel:MainWindowViewModel/>
+    </Window.DataContext>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnBaseAdd" Margin="291,6,0,0" VerticalAlignment="Top" Click="btnBaseAddClick" MinWidth="40" MinHeight="40" MaxWidth="40" MaxHeight="40" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="40" Width="40">
+        <Button Command="{Binding addButtonCommand}"
+                Margin="291,6,0,0"
+                VerticalAlignment="Top"
+                MinWidth="40"
+                MinHeight="40"
+                MaxWidth="40"
+                MaxHeight="40"
+                RenderTransformOrigin="0.5,0.5"
+                HorizontalAlignment="Left"
+                Height="40"
+                Width="40">
             <Image Source="images\plus.png"/>
         </Button>
-        <StackPanel x:Name="spBase" Height="NaN" Margin="0,54,0,0" ScrollViewer.VerticalScrollBarVisibility="Auto" CanVerticallyScroll="True"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,6,0,0" TextWrapping="Wrap" Text="Создание Base-элемента:" VerticalAlignment="Top" FontSize="24" FontFamily="Tahoma"/>
 
+        <ItemsControl ItemsSource="{Binding observableCollectionBaseElementViews}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel 
+            x:Name="spTest"
+            Height="NaN" 
+            Margin="0,54,0,0" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto" 
+            CanVerticallyScroll="True"
+            />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    
+        <TextBlock HorizontalAlignment="Left" Margin="10,6,0,0" TextWrapping="Wrap" Text="Создание Base-элемента:" VerticalAlignment="Top" FontSize="24" FontFamily="Tahoma"/>
     </Grid>
 </Window>

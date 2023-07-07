@@ -2,8 +2,15 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TRPGEditor"
+             xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"
+             xmlns:view="clr-namespace:TRPGEditor.Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+
+        <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">
+            <view:BaseElementView/>
+        </DataTemplate>
+        
     </Application.Resources>
 </Application>

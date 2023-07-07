@@ -12,17 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TRPGEditor.Base;
-using TRPGEditor.Views;
 
-namespace TRPGEditor
+namespace TRPGEditor.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для BaseElementView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BaseElementView : UserControl
     {
-        public MainWindow()
+        public BaseElementView()
         {
             InitializeComponent();
         }
