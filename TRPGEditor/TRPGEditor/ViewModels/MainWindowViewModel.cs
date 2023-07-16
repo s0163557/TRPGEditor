@@ -10,12 +10,28 @@ using System.Windows.Input;
 using TRPGEditor.Commands;
 using TRPGEditor.Views;
 
+//Сделай переключение между RadioButton и добавь прокрутку для всех панелек.
+
 namespace TRPGEditor.ViewModels
 {
-    internal class MainWindowViewModel
+    internal class MainWindowViewModel : ObservableClass
     {
-        List<BaseElementView> BaseElementViewsList = new List<BaseElementView>();
-        public ObservableCollection<BaseElementView> observableCollectionBaseElementViews { get; } = new ObservableCollection<BaseElementView>();
+
+        public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
+            = new ObservableCollection<BaseElementButtonViewModel>();
+
+        private BaseElementViewModel _currentBaseView;
+
+        public BaseElementViewModel CurrentBaseView
+        {
+            get { return _currentBaseView; }
+            set 
+            {
+                _currentBaseView = value;
+                OnPropertyChanged();
+            }
+        }
+
         private ICommand _addButtonCommand;
 
         public ICommand addButtonCommand
@@ -32,14 +48,15 @@ namespace TRPGEditor.ViewModels
 
         public MainWindowViewModel()
         {
-            _addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
+            addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
         }
 
         //Поидее иметь тут такую кнопку - неправильно. Если делать чистым MVVM, то надо, чтобы была модель, в которой будут находиться данные
         //и в которой будет находиться функционал работы с данными. Тут должен быть только делегат в модель.
         public void AddButtonAction(object obj)
         {
-            observableCollectionBaseElementViews.Add(new BaseElementView());
+            baseElementButtonViewModels.Add(new BaseElementButtonViewModel());
+            CurrentBaseView = baseElementButtonViewModels[baseElementButtonViewModels.Count - 1].thisBaseView;
         }
     }
 }

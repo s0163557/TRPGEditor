@@ -50,3 +50,11 @@ C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug
 C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.csproj.CoreCompileInputs.cache
 C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.exe
 C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.pdb
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementView.g.cs
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\App.baml
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementView.baml
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementButtonView.g.cs
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementButtonView.baml
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.g.cs
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.baml

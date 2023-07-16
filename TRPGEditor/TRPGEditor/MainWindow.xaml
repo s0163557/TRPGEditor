@@ -8,44 +8,82 @@
         xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"    
         xmlns:Views="clr-namespace:TRPGEditor.Views" x:Class="TRPGEditor.MainWindow"    
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="TRPGEditor" Height="700" Width="1000"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True">
 
     <Window.DataContext>
         <viewModel:MainWindowViewModel/>
     </Window.DataContext>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Button Command="{Binding addButtonCommand}"
-                Margin="291,6,0,0"
-                VerticalAlignment="Top"
-                MinWidth="40"
-                MinHeight="40"
-                MaxWidth="40"
-                MaxHeight="40"
+    <Border Background="#389490"
+            CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="147*"/>
+                <ColumnDefinition Width="253*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="217*"/>
+            </Grid.RowDefinitions>
+            <Button Command="{Binding addButtonCommand}"
+                Margin="180,0,0,0"
+                VerticalAlignment="Center"
+                MinWidth="30"
+                MinHeight="30"
+                MaxWidth="30"
+                MaxHeight="30"
                 RenderTransformOrigin="0.5,0.5"
                 HorizontalAlignment="Left"
-                Height="40"
-                Width="40">
-            <Image Source="images\plus.png"/>
-        </Button>
+                Height="30"
+                Width="30"
+                Background="Transparent"
+                BorderThickness="0">
+                <Image Source="images\plus.png"/>
+            </Button>
 
-        <ItemsControl ItemsSource="{Binding observableCollectionBaseElementViews}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel 
-            x:Name="spTest"
-            Height="NaN" 
-            Margin="0,54,0,0" 
-            ScrollViewer.VerticalScrollBarVisibility="Auto" 
-            CanVerticallyScroll="True"
+            <ContentControl
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10, 10, 10, 10"
+            Content ="{Binding CurrentBaseView}"
             />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-    
-        <TextBlock HorizontalAlignment="Left" Margin="10,6,0,0" TextWrapping="Wrap" Text="Создание Base-элемента:" VerticalAlignment="Top" FontSize="24" FontFamily="Tahoma"/>
-    </Grid>
+
+            <TextBlock
+            HorizontalAlignment="Left"
+            Margin="10,0,0,0"
+            TextWrapping="Wrap"
+            Text="Редактор Base"
+            VerticalAlignment="Center"
+            FontSize="24" 
+            FontFamily="Tahoma" 
+            Height="29" 
+            Width="159"/>
+
+            <ItemsControl 
+            ItemsSource="{Binding baseElementButtonViewModels}"
+            Margin="10,10,10,10"
+            Grid.Column="0"
+            Grid.Row="1">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <StackPanel 
+            HorizontalAlignment="Center"
+            Margin="10,10,10,10"
+            Grid.Column="1">
+                <TextBlock 
+                TextWrapping="Wrap" 
+                Text="Элементы выбранного Base:"
+                FontSize="24" 
+                FontFamily="Tahoma"/>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

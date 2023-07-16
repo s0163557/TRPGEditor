@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Release\
+C:\Users\Konstantin\source\repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Release\
 TRPGEditor
 none
 false
 TRACE
-C:\Users\Andrey\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
-2-1272007801
+C:\Users\Konstantin\source\repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
+42072368204
 
-14-956764053
+191100823562
 14-1656046352
-MainWindow.xaml;Views\BaseElementView.xaml;
+MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\StaticElementView.xaml;
 
 True
 

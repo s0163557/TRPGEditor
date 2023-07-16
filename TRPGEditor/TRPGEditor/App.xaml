@@ -11,6 +11,14 @@
         <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">
             <view:BaseElementView/>
         </DataTemplate>
-        
+
+        <DataTemplate DataType="{x:Type viewModel:BaseElementButtonViewModel}">
+            <view:BaseElementButtonView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
+            <view:StaticElementView/>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>
