@@ -8,14 +8,16 @@
 
     <Grid>
         <DockPanel>
-            <RadioButton 
+            <RadioButton
+            x:Name="RadioButton"
             GroupName="BaseRadioButton"
             Content="Button" 
-            HorizontalAlignment="Left" 
-            Margin="10,10,10,10" 
-            VerticalAlignment="Center"
+            Margin="10,10,10,10"
             FontSize="20"
-            FontFamily="Tahoma"/>
+            FontFamily="Tahoma"
+            Command="{Binding selectedCommand}"
+            Style="{StaticResource BaseRadioButtonTheme}" Width="79"
+                />
 
             <Button Command="{Binding }"
                 Margin="0, 10, 10, 10"
@@ -30,7 +32,7 @@
                 Width="30"
                 Background="Transparent"
                 BorderThickness="0">
-                <Image Source="..\images\delete.png"/>
+                <Image Source="../Data/Images/delete.png"/>
             </Button>
 
             <Button Command="{Binding }"
@@ -46,7 +48,7 @@
                 Width="30"
                 Background="Transparent"
                 BorderThickness="0">
-                <Image Source="..\images\edit.png"/>
+                <Image Source="../Data/Images/edit.png"/>
             </Button>
 
         </DockPanel>

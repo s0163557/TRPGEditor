@@ -7,8 +7,12 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Data/Themes/BaseRadioButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
 
-        <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">
             <view:BaseElementView/>
         </DataTemplate>
 
@@ -19,6 +23,6 @@
         <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
             <view:StaticElementView/>
         </DataTemplate>
-
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

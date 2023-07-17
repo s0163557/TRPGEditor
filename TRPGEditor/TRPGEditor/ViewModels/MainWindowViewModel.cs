@@ -8,9 +8,10 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using TRPGEditor.Commands;
+using TRPGEditor.Models;
 using TRPGEditor.Views;
 
-//Сделай переключение между RadioButton и добавь прокрутку для всех панелек.
+//Разберись, почему статический элемент только один добавляется.
 
 namespace TRPGEditor.ViewModels
 {
@@ -21,6 +22,7 @@ namespace TRPGEditor.ViewModels
             = new ObservableCollection<BaseElementButtonViewModel>();
 
         private BaseElementViewModel _currentBaseView;
+        private BaseElementModel _baseElementModel { get; set; }
 
         public BaseElementViewModel CurrentBaseView
         {
@@ -48,15 +50,21 @@ namespace TRPGEditor.ViewModels
 
         public MainWindowViewModel()
         {
+            _baseElementModel = BaseElementModel.GetInstance();
             addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
+            //Он получает ссылку, и будет сам обновляться, когда изменится оригинал.
+            baseElementButtonViewModels = _baseElementModel.baseElementButtonViewModels;
+
+            _baseElementModel.PropertyChanged += (sender, args) =>
+            {
+                CurrentBaseView = _baseElementModel.currentBaseView;
+            };
         }
 
-        //Поидее иметь тут такую кнопку - неправильно. Если делать чистым MVVM, то надо, чтобы была модель, в которой будут находиться данные
-        //и в которой будет находиться функционал работы с данными. Тут должен быть только делегат в модель.
         public void AddButtonAction(object obj)
         {
-            baseElementButtonViewModels.Add(new BaseElementButtonViewModel());
-            CurrentBaseView = baseElementButtonViewModels[baseElementButtonViewModels.Count - 1].thisBaseView;
+            _baseElementModel.AddButtonAction();
         }
+        
     }
 }

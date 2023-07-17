@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
-42072368204
+51456041511
 
 21-1848403520
 14-1656046352
-MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\StaticElementView.xaml;
+Data\Themes\BaseRadioButtonTheme.xaml;MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\StaticElementView.xaml;
 
-False
+True
 

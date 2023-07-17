@@ -58,3 +58,4 @@ C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\D
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementButtonView.baml
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.g.cs
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.baml
+C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Data\Themes\BaseRadioButtonTheme.baml
