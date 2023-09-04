@@ -59,3 +59,29 @@ C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\D
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.g.cs
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.baml
 C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Data\Themes\BaseRadioButtonTheme.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\bin\Debug\TRPGEditor.exe.config
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\bin\Debug\TRPGEditor.exe
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\bin\Debug\TRPGEditor.pdb
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.csproj.AssemblyReference.cache
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Data\Themes\BaseRadioButtonTheme.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\MainWindow.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementButtonView.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementView.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\App.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor_MarkupCompile.cache
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor_MarkupCompile.lref
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\App.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\MainWindow.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementButtonView.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BaseElementView.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\StaticElementView.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.g.resources
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.Properties.Resources.resources
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.csproj.GenerateResource.cache
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.csproj.CoreCompileInputs.cache
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.exe
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.pdb
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePage.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePage.baml

@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\TRPGEditor",
-    "\\TRPGEditor\\TRPGEditor",
-    "\\TRPGEditor\\TRPGEditor\\ViewModels",
-    "\\TRPGEditor\\TRPGEditor\\Views"
+    "\\TRPGEditor\\TRPGEditor"
   ],
-  "SelectedNode": "\\TRPGEditor\\TRPGEditor\\ViewModels\\MainWindowViewModel.cs",
+  "SelectedNode": "\\TRPGEditor\\TRPGEditor\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }

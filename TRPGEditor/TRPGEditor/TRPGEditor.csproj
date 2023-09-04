@@ -78,6 +78,9 @@
     <Compile Include="Views\BaseElementView.xaml.cs">
       <DependentUpon>BaseElementView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\BasePage.xaml.cs">
+      <DependentUpon>BasePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\StaticElementView.xaml.cs">
       <DependentUpon>StaticElementView.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BaseElementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BasePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

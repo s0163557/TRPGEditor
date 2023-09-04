@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\
 TRPGEditor
 none
 false
 DEBUG;TRACE
-C:\Users\Konstantin\Source\Repos\s0163557\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
-51456041511
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
+6-143834463
 
-21-1848403520
+221840611118
 14-1656046352
-Data\Themes\BaseRadioButtonTheme.xaml;MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\StaticElementView.xaml;
+Data\Themes\BaseRadioButtonTheme.xaml;MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\BasePage.xaml;Views\StaticElementView.xaml;
 
 True
 
