@@ -16,13 +16,22 @@
             <view:BaseElementView/>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type viewModel:BaseElementButtonViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:BasePageViewModel}">
+                <view:BasePage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:BaseElementButtonViewModel}">
             <view:BaseElementButtonView/>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:DiceViewModel}">
+                <view:DicePage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
             <view:StaticElementView/>
         </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

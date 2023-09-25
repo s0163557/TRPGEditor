@@ -85,3 +85,5 @@ F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.ex
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\TRPGEditor.pdb
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePage.g.cs
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePage.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DicePage.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DicePage.baml

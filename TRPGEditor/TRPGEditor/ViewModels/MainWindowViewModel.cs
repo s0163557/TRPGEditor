@@ -18,53 +18,39 @@ namespace TRPGEditor.ViewModels
     internal class MainWindowViewModel : ObservableClass
     {
 
-        public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
-            = new ObservableCollection<BaseElementButtonViewModel>();
+        public RelayCommand BaseViewCommand { get; set; }
+        public RelayCommand DiceViewCommand { get; set; }
 
-        private BaseElementViewModel _currentBaseView;
         private BaseElementModel _baseElementModel { get; set; }
 
-        public BaseElementViewModel CurrentBaseView
+        public BasePageViewModel BaseVM { get; set; }
+        public DiceViewModel DiceVM { get; set; }
+
+        private object _viewModel = null;
+
+        public object CurrentView
         {
-            get { return _currentBaseView; }
-            set 
-            {
-                _currentBaseView = value;
+            get { return _viewModel; }
+            set { _viewModel = value;
                 OnPropertyChanged();
             }
         }
-
-        private ICommand _addButtonCommand;
-
-        public ICommand addButtonCommand
-        {
-            get
-            {
-                return _addButtonCommand;
-            }
-            set
-            {
-                _addButtonCommand = value;
-            }
-        }
-
-        public MainWindowViewModel()
-        {
-            _baseElementModel = BaseElementModel.GetInstance();
-            addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
-            //Он получает ссылку, и будет сам обновляться, когда изменится оригинал.
-            baseElementButtonViewModels = _baseElementModel.baseElementButtonViewModels;
-
-            _baseElementModel.PropertyChanged += (sender, args) =>
-            {
-                CurrentBaseView = _baseElementModel.currentBaseView;
-            };
-        }
-
-        public void AddButtonAction(object obj)
-        {
-            _baseElementModel.AddButtonAction();
-        }
         
+        public MainWindowViewModel() 
+        {
+            BaseVM = new BasePageViewModel();
+            DiceVM = new DiceViewModel();
+            CurrentView = BaseVM;
+            BaseViewCommand = new RelayCommand(o => 
+            {
+                CurrentView = BaseVM;
+            });
+            DiceViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = DiceVM;
+            });
+            _baseElementModel = BaseElementModel.GetInstance();
+        }
+
     }
 }

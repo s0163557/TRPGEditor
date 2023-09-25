@@ -8,7 +8,7 @@
         xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"    
         xmlns:Views="clr-namespace:TRPGEditor.Views" x:Class="TRPGEditor.MainWindow"    
         mc:Ignorable="d"
-        Title="TRPGEditor" Height="700" Width="1000"
+        Title="TRPGEditor" Height="1000" Width="1300"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
@@ -22,50 +22,14 @@
             CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="147*"/>
-                <ColumnDefinition Width="253*"/>
+                <ColumnDefinition Width="72*"/>
                 <ColumnDefinition Width="253*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25*"/>
                 <RowDefinition Height="217*"/>
             </Grid.RowDefinitions>
-            <Button
-                Grid.Column="1"
-                Command="{Binding addButtonCommand}"
-                Margin="180,0,0,0"
-                VerticalAlignment="Center"
-                MinWidth="30"
-                MinHeight="30"
-                MaxWidth="30"
-                MaxHeight="30"
-                RenderTransformOrigin="0.5,0.5"
-                HorizontalAlignment="Left"
-                Height="30"
-                Width="30"
-                Background="Transparent"
-                BorderThickness="0">
-                <Image Source="/Data/Images/plus.png" RenderTransformOrigin="10.689,0.718"/>
-            </Button>
 
-            <ContentControl
-            Grid.Row="1"
-            Grid.Column="2"
-            Margin="10, 10, 10, 10"
-            Content ="{Binding CurrentBaseView}"
-            />
-
-            <TextBlock
-            Grid.Column="1"
-            HorizontalAlignment="Left"
-            Margin="10,0,0,0"
-            TextWrapping="Wrap"
-            Text="Редактор Base"
-            VerticalAlignment="Center"
-            FontSize="24" 
-            FontFamily="Tahoma" 
-            Height="29" 
-            Width="159"/>
 
             <TextBlock             
             HorizontalAlignment="Left"
@@ -75,7 +39,7 @@
             VerticalAlignment="Center"
             TextAlignment="Center"
             FontSize="24" 
-            FontFamily="Tahoma" />
+            FontFamily="Tahoma" Height="29" Width="256" />
 
 
             <StackPanel
@@ -92,6 +56,7 @@
                 FontSize="20" 
                 FontFamily="Tahoma"
                 IsChecked="True"
+                Command="{Binding BaseViewCommand}"   
                 >
                 </RadioButton>
 
@@ -103,35 +68,26 @@
                 FontSize="20" 
                 FontFamily="Tahoma"
                 Style="{StaticResource BaseRadioButtonTheme}"
+                Command="{Binding DiceViewCommand}"   
+                
                 >
                 </RadioButton>
 
             </StackPanel>
 
-            <ScrollViewer
-            Margin="10,10,10,10"
-            Grid.Column="1"
-            Grid.Row="1"
-            VerticalScrollBarVisibility="Hidden">
-                <ItemsControl>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-            </ScrollViewer>
-
             <StackPanel 
             HorizontalAlignment="Center"
-            Margin="10,10,10,10"
-            Grid.Column="2">
-                <TextBlock 
-                TextWrapping="Wrap" 
-                Text="Элементы выбранного Base:"
-                FontSize="24" 
-                FontFamily="Tahoma"/>
-            </StackPanel>
+            Margin="0,10,0,10"
+            Grid.Column="1" Width="0"/>
+
+            <ContentControl
+                Grid.Column="1"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="10,10,10,10"
+                Content ="{Binding CurrentView}">
+            </ContentControl>
+
         </Grid>
     </Border>
 </Window>

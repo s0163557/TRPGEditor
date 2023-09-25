@@ -9,9 +9,9 @@
     <ScrollViewer>
         <StackPanel>
 
-            <DockPanel LastChildFill="False">
+            <DockPanel>
 
-                <StackPanel Margin="10, 10, 10, 10">
+                <StackPanel Margin="10, 10, 10, 10" MaxWidth="200">
                     <DockPanel>
 
                         <TextBlock 
@@ -39,7 +39,8 @@
                         </Button>
 
                     </DockPanel>
-                    <ItemsControl 
+                    
+                    <ItemsControl
                     ItemsSource="{Binding staticElementButtonViewModels}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>

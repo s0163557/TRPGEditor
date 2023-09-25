@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TRPGEditor.Views
 {
     /// <summary>
-    /// Логика взаимодействия для BasePage.xaml
+    /// Логика взаимодействия для DicePage.xaml
     /// </summary>
-    public partial class BasePage : UserControl
+    public partial class DicePage : UserControl
     {
-        public BasePage()
+        public DicePage()
         {
             InitializeComponent();
         }

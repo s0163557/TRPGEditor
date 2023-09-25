@@ -70,6 +70,8 @@
     <Compile Include="Data\StaticObjects\StringObject.cs" />
     <Compile Include="ViewModels\BaseElementButtonViewModel.cs" />
     <Compile Include="ViewModels\BaseElementViewModel.cs" />
+    <Compile Include="ViewModels\BasePageViewModel.cs" />
+    <Compile Include="ViewModels\DiceViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\StaticElementViewModel.cs" />
     <Compile Include="Views\BaseElementButtonView.xaml.cs">
@@ -80,6 +82,9 @@
     </Compile>
     <Compile Include="Views\BasePage.xaml.cs">
       <DependentUpon>BasePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DicePage.xaml.cs">
+      <DependentUpon>DicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\StaticElementView.xaml.cs">
       <DependentUpon>StaticElementView.xaml</DependentUpon>
@@ -110,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BasePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DicePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
