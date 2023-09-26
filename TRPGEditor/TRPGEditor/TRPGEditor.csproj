@@ -56,9 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Commands\IModel.cs" />
     <Compile Include="Data\Commands\ObservableClass.cs" />
     <Compile Include="Data\Commands\RelayCommand.cs" />
     <Compile Include="Models\BaseElementModel.cs" />
+    <Compile Include="Models\DiceElementModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +85,9 @@
     <Compile Include="Views\BasePage.xaml.cs">
       <DependentUpon>BasePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DiceElementView.xaml.cs">
+      <DependentUpon>DiceElementView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DicePage.xaml.cs">
       <DependentUpon>DicePage.xaml</DependentUpon>
     </Compile>
@@ -90,6 +95,10 @@
       <DependentUpon>StaticElementView.xaml</DependentUpon>
     </Compile>
     <Page Include="Data\Themes\BaseRadioButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Data\Themes\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,6 +124,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BasePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DiceElementView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

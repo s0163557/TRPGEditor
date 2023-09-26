@@ -1,91 +1,86 @@
-﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRPGEditor"
         xmlns:Properties="clr-namespace:TRPGEditor.Properties"
-        xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"    
-        xmlns:Views="clr-namespace:TRPGEditor.Views" x:Class="TRPGEditor.MainWindow"    
+        xmlns:viewModel="clr-namespace:TRPGEditor.ViewModels"
+        xmlns:Views="clr-namespace:TRPGEditor.Views"
+        x:Class="TRPGEditor.MainWindow"
         mc:Ignorable="d"
-        Title="TRPGEditor" Height="1000" Width="1300"
+        Title="TRPGEditor"
+        Height="1000"
+        Width="1300"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True">
 
     <Window.DataContext>
-        <viewModel:MainWindowViewModel/>
+        <viewModel:MainWindowViewModel />
     </Window.DataContext>
 
     <Border Background="#46b9b4"
             CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="72*"/>
-                <ColumnDefinition Width="253*"/>
+                <ColumnDefinition Width="72*" />
+                <ColumnDefinition Width="253*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="25*"/>
-                <RowDefinition Height="217*"/>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="217*" />
             </Grid.RowDefinitions>
 
 
-            <TextBlock             
-            HorizontalAlignment="Left"
-            Margin="10,0,0,0"
-            TextWrapping="Wrap"
-            Text="Редактор НРИ Warlords"
-            VerticalAlignment="Center"
-            TextAlignment="Center"
-            FontSize="24" 
-            FontFamily="Tahoma" Height="29" Width="256" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="10,0,0,0"
+                       TextWrapping="Wrap"
+                       Text="Редактор НРИ Warlords"
+                       VerticalAlignment="Center"
+                       TextAlignment="Center"
+                       FontSize="24"
+                       FontFamily="Tahoma"
+                       Height="29"
+                       Width="256" />
 
 
-            <StackPanel
-            Margin="10,10,10,10"
-            Grid.Row="1"
-            >
+            <StackPanel Margin="10,10,10,10"
+                        Grid.Row="1">
 
-                <RadioButton
-                Grid.Row="1"
-                Height="50"
-                GroupName="Views"
-                Content="Основные элементы"
-                Style="{StaticResource BaseRadioButtonTheme}"
-                FontSize="20" 
-                FontFamily="Tahoma"
-                IsChecked="True"
-                Command="{Binding BaseViewCommand}"   
-                >
+                <RadioButton Grid.Row="1"
+                             Height="50"
+                             GroupName="Views"
+                             Content="Основные элементы"
+                             Style="{StaticResource BaseRadioButtonTheme}"
+                             FontSize="20"
+                             FontFamily="Tahoma"
+                             IsChecked="True"
+                             Command="{Binding BaseViewCommand}">
                 </RadioButton>
 
-                <RadioButton
-                Height="50"
-                Grid.Row="1"
-                GroupName="Views"
-                Content="Кубики"
-                FontSize="20" 
-                FontFamily="Tahoma"
-                Style="{StaticResource BaseRadioButtonTheme}"
-                Command="{Binding DiceViewCommand}"   
-                
-                >
+                <RadioButton Height="50"
+                             Grid.Row="1"
+                             GroupName="Views"
+                             Content="Кубики"
+                             FontSize="20"
+                             FontFamily="Tahoma"
+                             Style="{StaticResource BaseRadioButtonTheme}"
+                             Command="{Binding DiceViewCommand}">
                 </RadioButton>
 
             </StackPanel>
 
-            <StackPanel 
-            HorizontalAlignment="Center"
-            Margin="0,10,0,10"
-            Grid.Column="1" Width="0"/>
+            <StackPanel HorizontalAlignment="Center"
+                        Margin="0,10,0,10"
+                        Grid.Column="1"
+                        Width="0" />
 
-            <ContentControl
-                Grid.Column="1"
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Margin="10,10,10,10"
-                Content ="{Binding CurrentView}">
+            <ContentControl Grid.Column="1"
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Margin="10,10,10,10"
+                            Content="{Binding CurrentView}">
             </ContentControl>
 
         </Grid>

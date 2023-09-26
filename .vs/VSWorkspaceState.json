@@ -3,7 +3,9 @@
     "",
     "\\TRPGEditor",
     "\\TRPGEditor\\TRPGEditor",
-    "\\TRPGEditor\\TRPGEditor\\ViewModels"
+    "\\TRPGEditor\\TRPGEditor\\ViewModels",
+    "\\TRPGEditor\\TRPGEditor\\Views"
   ],
+  "SelectedNode": "\\TRPGEditor\\TRPGEditor\\ViewModels\\BaseElementButtonViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

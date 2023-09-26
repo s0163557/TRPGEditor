@@ -10,6 +10,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Data/Themes/BaseRadioButtonTheme.xaml"/>
+                <ResourceDictionary Source="Data/Themes/TextBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">

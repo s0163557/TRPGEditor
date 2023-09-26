@@ -6,16 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using TRPGEditor.Commands;
+using TRPGEditor.Data.Commands;
 using TRPGEditor.ViewModels;
 
 namespace TRPGEditor.Models
 {
-    internal class BaseElementModel : ObservableClass
+    internal class BaseElementModel : ObservableClass, IModel
     {
         private static BaseElementModel _baseElementModel;
         public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
             = new ObservableCollection<BaseElementButtonViewModel>();
         public BaseElementViewModel currentBaseView;
+
+        private string _radioButtonContent;
+        public string RadioButtonContent
+        {
+            get { return _radioButtonContent; }
+            set
+            {
+                _radioButtonContent = value;
+                OnPropertyChanged();
+            }
+        }
 
         private BaseElementModel(){}
 
@@ -28,12 +40,20 @@ namespace TRPGEditor.Models
 
         public void AddButtonAction()
         {
-            baseElementButtonViewModels.Add(new BaseElementButtonViewModel());
+            baseElementButtonViewModels.Add(new BaseElementButtonViewModel(this));
         }
 
-        public void SelectRadioButton(BaseElementButtonViewModel Sender)
+        public void DeleteButtonAction(object Sender)
         {
-            currentBaseView = Sender.thisBaseView;
+            BaseElementButtonViewModel sender = Sender as BaseElementButtonViewModel;
+            baseElementButtonViewModels.Remove(sender);
+            OnPropertyChanged();
+        }
+
+        public void SelectRadioButton(object Sender)
+        {
+            BaseElementButtonViewModel sender = Sender as BaseElementButtonViewModel;
+            currentBaseView = sender.thisBaseView;
             OnPropertyChanged();
         }
 

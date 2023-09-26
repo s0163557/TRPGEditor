@@ -87,3 +87,6 @@ F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePag
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\BasePage.baml
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DicePage.g.cs
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DicePage.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DiceElementView.g.cs
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Views\DiceElementView.baml
+F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\obj\Debug\Data\Themes\TextBoxTheme.baml

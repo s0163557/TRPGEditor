@@ -9,14 +9,36 @@
     <ScrollViewer>
         <StackPanel>
 
-            <DockPanel>
+            <TextBlock TextWrapping="Wrap"
+                       Text="Свойства выбранного правила:"
+                       HorizontalAlignment="Center"
+                       FontSize="24"
+                       FontFamily="Tahoma"
+                       Margin="5,5,5,5" />
 
-                <StackPanel Margin="10, 10, 10, 10" MaxWidth="200">
+            <DockPanel>
+                <TextBlock TextWrapping="Wrap"
+                           Text="Название:"
+                           HorizontalAlignment="Center"
+                           FontSize="24"
+                           FontFamily="Tahoma"
+                           Margin="5,5,5,5" />
+
+                <TextBox MaxHeight="400"
+                         MaxWidth="400"
+                         Margin="5, 5, 5, 5"
+                         Text="{Binding RadioButtonContent, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource TextBoxTheme}"/>
+            </DockPanel>
+
+            <DockPanel >
+
+                <StackPanel Margin="10, 10, 10, 10">
                     <DockPanel>
 
                         <TextBlock 
                     TextWrapping="Wrap"
-                    Text="Статические элементы"
+                    Text="Добавить новое поле:"
                     HorizontalAlignment="Center"
                     FontSize="24"
                     FontFamily="Tahoma"
@@ -48,35 +70,6 @@
                             </ItemsPanelTemplate>
                         </ItemsControl.ItemsPanel>
                     </ItemsControl>
-                </StackPanel>
-
-                <StackPanel Margin="10, 10, 10, 10">
-                    <DockPanel>
-                        <TextBlock 
-                    TextWrapping="Wrap" 
-                    Text="Динамические элементы" 
-                    HorizontalAlignment="Center" 
-                    FontSize="24" 
-                    FontFamily="Tahoma"
-                    Margin="10, 10, 10, 10"/>
-
-                        <Button
-                    Margin="0,10,10,10"
-                    VerticalAlignment="Center"
-                    MinWidth="30"
-                    MinHeight="30"
-                    MaxWidth="30"
-                    MaxHeight="30"
-                    RenderTransformOrigin="0.5,0.5"
-                    HorizontalAlignment="Left"
-                    Height="30"
-                    Width="30"
-                    Background="Transparent"
-                    BorderThickness="0">
-                            <Image Source="../Data/Images/plus.png"/>
-                        </Button>
-                    </DockPanel>
-
                 </StackPanel>
 
             </DockPanel>

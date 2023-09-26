@@ -4,17 +4,29 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Input;
 using TRPGEditor.Commands;
 
 namespace TRPGEditor.ViewModels
 {
-    internal class BaseElementViewModel
+    internal class BaseElementViewModel : ObservableClass
     {
         public ObservableCollection<StaticElementViewModel> staticElementButtonViewModels { get; }
             = new ObservableCollection<StaticElementViewModel>();
 
         private ICommand _addStaticButtonCommand;
+
+        private string _radioButtonContent = "Правило";
+        public string RadioButtonContent
+        {
+            get { return _radioButtonContent; }
+            set
+            {
+                _radioButtonContent = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ICommand addStaticButtonCommand
         {
@@ -28,14 +40,35 @@ namespace TRPGEditor.ViewModels
             }
         }
 
+        private ICommand _addTextChangeListener;
+        public ICommand addTextChangeListener
+        {
+            get
+            {
+                return _addTextChangeListener;
+            }
+            set
+            {
+                _addTextChangeListener = value;
+            }
+        }
+
         public BaseElementViewModel()
         {
             addStaticButtonCommand = new RelayCommand(new Action<object>(AddStaticButtonAction));
+            addTextChangeListener = new RelayCommand(new Action<object>(TextChanged));
+            OnPropertyChanged();
         }
 
         public void AddStaticButtonAction(object obj)
         {
             staticElementButtonViewModels.Add(new StaticElementViewModel());
+        }
+        private void TextChanged(object Sender)
+        {
+            TextBox sender = Sender as TextBox;
+            RadioButtonContent = sender.Text;
+            OnPropertyChanged();
         }
     }
 }

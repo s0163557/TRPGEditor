@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 F:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml
-7306335577
+9683378814
 
-24646583429
+271776627155
 14-1656046352
-Data\Themes\BaseRadioButtonTheme.xaml;MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\BasePage.xaml;Views\DicePage.xaml;Views\StaticElementView.xaml;
+Data\Themes\BaseRadioButtonTheme.xaml;Data\Themes\TextBoxTheme.xaml;MainWindow.xaml;Views\BaseElementButtonView.xaml;Views\BaseElementView.xaml;Views\BasePage.xaml;Views\DiceElementView.xaml;Views\DicePage.xaml;Views\StaticElementView.xaml;
 
 False
 
