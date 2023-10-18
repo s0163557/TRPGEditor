@@ -25,14 +25,26 @@
             <view:BaseElementButtonView/>
         </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:DiceViewModel}">
+            <DataTemplate DataType="{x:Type viewModel:DicePageViewModel}">
                 <view:DicePage/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
             <view:StaticElementView/>
         </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:EdgeViewModel}">
+                <view:EdgeView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DiceElementViewModel}">
+                <view:DiceElementView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DicePageButtonViewModel}">
+                <view:DicePageButtonView />
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

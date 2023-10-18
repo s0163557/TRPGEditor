@@ -12,7 +12,8 @@
                               Background="{TemplateBinding Background}">
 
                             <TextBlock Text="{TemplateBinding Property=Content}"
-                                       VerticalAlignment="Center"/>
+                                       VerticalAlignment="Center"
+                                       Padding="5,0,0,0"/>
                             
                         </Grid>
                     </ControlTemplate>
@@ -26,7 +27,8 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#2ca09a"/>
+                <Setter Property="Background"
+                        Value="LightGray"/>
             </Trigger>
         </Style.Triggers>
 

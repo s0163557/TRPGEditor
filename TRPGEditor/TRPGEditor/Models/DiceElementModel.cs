@@ -14,9 +14,9 @@ namespace TRPGEditor.Models
     {
 
         private static DiceElementModel _diceElementModel;
-        public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
-            = new ObservableCollection<BaseElementButtonViewModel>();
-        public BaseElementViewModel currentBaseView;
+        public ObservableCollection<DicePageButtonViewModel> DicePageButtonViewModels { get; }
+            = new ObservableCollection<DicePageButtonViewModel>();
+        public DiceElementViewModel currentBaseView;
 
         private DiceElementModel() { }
 
@@ -29,18 +29,18 @@ namespace TRPGEditor.Models
 
         public void AddButtonAction()
         {
-            baseElementButtonViewModels.Add(new BaseElementButtonViewModel(this));
+            DicePageButtonViewModels.Add(new DicePageButtonViewModel(this));
         }
         public void DeleteButtonAction(object Sender)
         {
-            BaseElementButtonViewModel sender = Sender as BaseElementButtonViewModel;
-            baseElementButtonViewModels.Remove(sender);
+            DicePageButtonViewModel sender = Sender as DicePageButtonViewModel;
+            DicePageButtonViewModels.Remove(sender);
             OnPropertyChanged();
         }
 
         public void SelectRadioButton(object Sender)
         {
-            BaseElementButtonViewModel sender = Sender as BaseElementButtonViewModel;
+            DicePageButtonViewModel sender = Sender as DicePageButtonViewModel;
             currentBaseView = sender.thisBaseView;
             OnPropertyChanged();
         }

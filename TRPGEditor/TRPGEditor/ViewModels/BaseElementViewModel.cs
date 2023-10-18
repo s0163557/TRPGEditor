@@ -16,6 +16,7 @@ namespace TRPGEditor.ViewModels
             = new ObservableCollection<StaticElementViewModel>();
 
         private ICommand _addStaticButtonCommand;
+        
 
         private string _radioButtonContent = "Правило";
         public string RadioButtonContent
@@ -56,19 +57,12 @@ namespace TRPGEditor.ViewModels
         public BaseElementViewModel()
         {
             addStaticButtonCommand = new RelayCommand(new Action<object>(AddStaticButtonAction));
-            addTextChangeListener = new RelayCommand(new Action<object>(TextChanged));
             OnPropertyChanged();
         }
 
         public void AddStaticButtonAction(object obj)
         {
             staticElementButtonViewModels.Add(new StaticElementViewModel());
-        }
-        private void TextChanged(object Sender)
-        {
-            TextBox sender = Sender as TextBox;
-            RadioButtonContent = sender.Text;
-            OnPropertyChanged();
         }
     }
 }

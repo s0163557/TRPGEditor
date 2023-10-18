@@ -17,7 +17,7 @@ namespace TRPGEditor.ViewModels
            = new ObservableCollection<BaseElementButtonViewModel>();
 
         private BaseElementViewModel _currentBaseView;
-        private BaseElementModel _baseElementModel { get; set; }
+        private BasePageModel _baseElementModel { get; set; }
 
         public BaseElementViewModel CurrentBaseView
         {
@@ -45,7 +45,7 @@ namespace TRPGEditor.ViewModels
 
         public BasePageViewModel()
         {
-            _baseElementModel = BaseElementModel.GetInstance();
+            _baseElementModel = BasePageModel.GetInstance();
             addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
             //Он получает ссылку, и будет сам обновляться, когда изменится оригинал.
             baseElementButtonViewModels = _baseElementModel.baseElementButtonViewModels;

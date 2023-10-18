@@ -10,15 +10,15 @@ using TRPGEditor.Models;
 
 namespace TRPGEditor.ViewModels
 {
-    internal class DiceViewModel : ObservableClass
+    internal class DicePageViewModel : ObservableClass
     {
-        public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
-            = new ObservableCollection<BaseElementButtonViewModel>();
+        public ObservableCollection<DicePageButtonViewModel> DicePageButtonViewModel { get; }
+            = new ObservableCollection<DicePageButtonViewModel>();
 
-        private BaseElementViewModel _currentDiceView;
+        private DiceElementViewModel _currentDiceView;
         private DiceElementModel _diceElementModel { get; set; }
 
-        public BaseElementViewModel CurrentBaseView
+        public DiceElementViewModel CurrentBaseView
         {
             get { return _currentDiceView; }
             set
@@ -41,12 +41,12 @@ namespace TRPGEditor.ViewModels
             }
         }
 
-        public DiceViewModel()
+        public DicePageViewModel()
         {
             _diceElementModel = DiceElementModel.GetInstance();
             addButtonCommand = new RelayCommand(new Action<object>(AddButtonAction));
             //Он получает ссылку, и будет сам обновляться, когда изменится оригинал.
-            baseElementButtonViewModels = _diceElementModel.baseElementButtonViewModels;
+            DicePageButtonViewModel = _diceElementModel.DicePageButtonViewModels;
 
             _diceElementModel.PropertyChanged += (sender, args) =>
             {

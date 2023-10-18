@@ -15,8 +15,8 @@
             <ColumnDefinition MinWidth="250" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*" />
-            <RowDefinition Height="217*" />
+            <RowDefinition MaxHeight="50" />
+            <RowDefinition MinHeight="250" />
         </Grid.RowDefinitions>
 
         <Button Grid.Column="0"
@@ -57,7 +57,7 @@
                       Grid.Column="0"
                       Grid.Row="1"
                       VerticalScrollBarVisibility="Hidden">
-            <ItemsControl ItemsSource="{Binding baseElementButtonViewModels}">
+            <ItemsControl ItemsSource="{Binding DicePageButtonViewModel}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel />

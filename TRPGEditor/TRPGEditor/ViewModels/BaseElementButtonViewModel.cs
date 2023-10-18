@@ -59,13 +59,19 @@ namespace TRPGEditor.ViewModels
         { 
             thisBaseView = new BaseElementViewModel();
             RadioButtonContent = thisBaseView.RadioButtonContent;
-            if (parentModel as BaseElementModel != null)
-                thisBaseModel = BaseElementModel.GetInstance();
+            if (parentModel as BasePageModel != null)
+                thisBaseModel = BasePageModel.GetInstance();
             if (parentModel as DiceElementModel != null)
                 thisBaseModel = DiceElementModel.GetInstance();
 
             selectedCommand = new RelayCommand(new Action<object>(SelectCommand));
             deletedCommand = new RelayCommand(new Action<object>(DeleteCommand));
+
+            thisBaseView.PropertyChanged += (sender, args) =>
+            {
+                RadioButtonContent = thisBaseView.RadioButtonContent;
+            };
+
         }
 
         public void SelectCommand(object obj)

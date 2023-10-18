@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -11,31 +12,20 @@ using TRPGEditor.ViewModels;
 
 namespace TRPGEditor.Models
 {
-    internal class BaseElementModel : ObservableClass, IModel
+    internal class BasePageModel : ObservableClass, IModel
     {
-        private static BaseElementModel _baseElementModel;
+        private static BasePageModel _basePageModel;
         public ObservableCollection<BaseElementButtonViewModel> baseElementButtonViewModels { get; }
             = new ObservableCollection<BaseElementButtonViewModel>();
-        public BaseElementViewModel currentBaseView;
+        public BaseElementViewModel currentBaseView; 
 
-        private string _radioButtonContent;
-        public string RadioButtonContent
+        private BasePageModel(){}
+
+        public static BasePageModel GetInstance() 
         {
-            get { return _radioButtonContent; }
-            set
-            {
-                _radioButtonContent = value;
-                OnPropertyChanged();
-            }
-        }
-
-        private BaseElementModel(){}
-
-        public static BaseElementModel GetInstance() 
-        {
-            if (_baseElementModel == null )
-                _baseElementModel = new BaseElementModel();
-            return _baseElementModel;
+            if (_basePageModel == null )
+                _basePageModel = new BasePageModel();
+            return _basePageModel;
         }
 
         public void AddButtonAction()

@@ -21,10 +21,10 @@ namespace TRPGEditor.ViewModels
         public RelayCommand BaseViewCommand { get; set; }
         public RelayCommand DiceViewCommand { get; set; }
 
-        private BaseElementModel _baseElementModel { get; set; }
+        private BasePageModel _baseElementModel { get; set; }
 
         public BasePageViewModel BaseVM { get; set; }
-        public DiceViewModel DiceVM { get; set; }
+        public DicePageViewModel DiceVM { get; set; }
 
         private object _viewModel = null;
 
@@ -39,7 +39,7 @@ namespace TRPGEditor.ViewModels
         public MainWindowViewModel() 
         {
             BaseVM = new BasePageViewModel();
-            DiceVM = new DiceViewModel();
+            DiceVM = new DicePageViewModel();
             CurrentView = BaseVM;
             BaseViewCommand = new RelayCommand(o => 
             {
@@ -49,7 +49,7 @@ namespace TRPGEditor.ViewModels
             {
                 CurrentView = DiceVM;
             });
-            _baseElementModel = BaseElementModel.GetInstance();
+            _baseElementModel = BasePageModel.GetInstance();
         }
 
     }

@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:TRPGEditor.Views"
-             mc:Ignorable="d">
+             mc:Ignorable="d"
+             Background="WhiteSmoke">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -13,7 +14,7 @@
             <ColumnDefinition MinWidth="250" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition MaxHeight="100" />
+            <RowDefinition Height="0" />
             <RowDefinition MaxHeight="50" />
             <RowDefinition MinHeight="250" />
         </Grid.RowDefinitions>

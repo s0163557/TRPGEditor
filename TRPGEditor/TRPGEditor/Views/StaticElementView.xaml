@@ -19,11 +19,13 @@
                FontSize="20" />
         <Label Grid.Column="1"
                Content="Содержание"
-               FontSize="20" />
+               FontSize="20"
+               />
         <TextBox MaxHeight="400"
                  MaxWidth="400"
                  Grid.Row="1"
                  Margin="5, 5, 5, 5"
+                 Text="{Binding name}"
                  Style="{StaticResource TextBoxTheme}" />
 
         <TextBox MaxHeight="400"
@@ -31,6 +33,7 @@
                  Grid.Row="1"
                  Grid.Column="1"
                  Margin="5, 5, 5, 5"
+                 Text="{Binding content}"
                  Style="{StaticResource TextBoxTheme}" />
     </Grid>
 </UserControl>
