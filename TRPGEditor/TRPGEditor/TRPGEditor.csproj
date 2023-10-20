@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,52 +57,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Classes\Dice.cs" />
     <Compile Include="Data\Commands\IModel.cs" />
     <Compile Include="Data\Commands\ObservableClass.cs" />
     <Compile Include="Data\Commands\RelayCommand.cs" />
-    <Compile Include="Models\BasePageModel.cs" />
-    <Compile Include="Models\DiceElementModel.cs" />
+    <Compile Include="Models\TermModel.cs" />
+    <Compile Include="Models\DiceModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RandomObjects\Dice.cs" />
-    <Compile Include="RandomObjects\IRandomObject.cs" />
-    <Compile Include="Data\StaticObjects\IStaticObject.cs" />
-    <Compile Include="Data\StaticObjects\StringObject.cs" />
-    <Compile Include="ViewModels\BaseElementButtonViewModel.cs" />
-    <Compile Include="ViewModels\BaseElementViewModel.cs" />
-    <Compile Include="ViewModels\BasePageViewModel.cs" />
-    <Compile Include="ViewModels\DiceElementViewModel.cs" />
-    <Compile Include="ViewModels\DicePageButtonViewModel.cs" />
-    <Compile Include="ViewModels\DicePageViewModel.cs" />
-    <Compile Include="ViewModels\EdgeViewModel.cs" />
+    <Compile Include="ViewModels\TermButtonViewModel.cs" />
+    <Compile Include="ViewModels\TermViewModel.cs" />
+    <Compile Include="ViewModels\TermsViewModel.cs" />
+    <Compile Include="ViewModels\DiceViewModel.cs" />
+    <Compile Include="ViewModels\DiceButtonViewModel.cs" />
+    <Compile Include="ViewModels\DicesViewModel.cs" />
+    <Compile Include="ViewModels\DiceEdgeViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\StaticElementViewModel.cs" />
-    <Compile Include="Views\BaseElementButtonView.xaml.cs">
-      <DependentUpon>BaseElementButtonView.xaml</DependentUpon>
+    <Compile Include="ViewModels\TermComponentViewModel.cs" />
+    <Compile Include="Views\TermButtonView.xaml.cs">
+      <DependentUpon>TermButtonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BaseElementView.xaml.cs">
-      <DependentUpon>BaseElementView.xaml</DependentUpon>
+    <Compile Include="Views\TermView.xaml.cs">
+      <DependentUpon>TermView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BasePage.xaml.cs">
-      <DependentUpon>BasePage.xaml</DependentUpon>
+    <Compile Include="Views\TermsView.xaml.cs">
+      <DependentUpon>TermsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DiceElementView.xaml.cs">
-      <DependentUpon>DiceElementView.xaml</DependentUpon>
+    <Compile Include="Views\DiceView.xaml.cs">
+      <DependentUpon>DiceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DicePage.xaml.cs">
-      <DependentUpon>DicePage.xaml</DependentUpon>
+    <Compile Include="Views\DicesView.xaml.cs">
+      <DependentUpon>DicesView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DicePageButtonView.xaml.cs">
-      <DependentUpon>DicePageButtonView.xaml</DependentUpon>
+    <Compile Include="Views\DiceButtonView.xaml.cs">
+      <DependentUpon>DiceButtonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EdgeView.xaml.cs">
-      <DependentUpon>EdgeView.xaml</DependentUpon>
+    <Compile Include="Views\DiceEdgeView.xaml.cs">
+      <DependentUpon>DiceEdgeView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\StaticElementView.xaml.cs">
-      <DependentUpon>StaticElementView.xaml</DependentUpon>
+    <Compile Include="Views\TermComponentView.xaml.cs">
+      <DependentUpon>TermComponentView.xaml</DependentUpon>
     </Compile>
     <Page Include="Data\Themes\BaseRadioButtonTheme.xaml">
       <SubType>Designer</SubType>
@@ -119,40 +117,39 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\Base\Base.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\BaseElementButtonView.xaml">
+    <Page Include="Views\TermButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BaseElementView.xaml">
+    <Page Include="Views\TermView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BasePage.xaml">
+    <Page Include="Views\TermsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DiceElementView.xaml">
+    <Page Include="Views\DiceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DicePage.xaml">
+    <Page Include="Views\DicesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\DicePageButtonView.xaml">
+    <Page Include="Views\DiceButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EdgeView.xaml">
+    <Page Include="Views\DiceEdgeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\StaticElementView.xaml">
+    <Page Include="Views\TermComponentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

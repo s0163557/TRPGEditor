@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="TRPGEditor.Views.DiceEdgeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TRPGEditor.Views"
+             mc:Ignorable="d" >
+    <DockPanel>
+        <TextBlock MinHeight="50"
+                 MinWidth="50"
+                 MaxHeight="400"
+                 MaxWidth="400"
+                 Margin="5, 5, 5, 5"
+                 FontSize="30"
+                 Text="{Binding Id}"/>
+
+        <TextBox MaxHeight="400"
+                 MaxWidth="400"
+                 MinHeight="50"
+                 MinWidth="250"
+                 Margin="5, 5, 5, 5"
+                 Text="{Binding Content}"
+                 Style="{StaticResource TextBoxTheme}" />
+    </DockPanel>
+</UserControl>

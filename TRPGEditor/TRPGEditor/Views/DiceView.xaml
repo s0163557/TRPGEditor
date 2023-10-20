@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="TRPGEditor.Views.DiceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TRPGEditor.Views"
+             mc:Ignorable="d"
+             Background="WhiteSmoke">
+
+    <ScrollViewer>
+        <StackPanel>
+
+            <TextBlock TextWrapping="Wrap"
+                       Text="Свойства выбранного кубика:"
+                       HorizontalAlignment="Center"
+                       FontSize="24"
+                       FontFamily="Tahoma"
+                       Margin="5,5,5,5" />
+
+            <DockPanel>
+                <TextBlock TextWrapping="Wrap"
+                           Text="Название:"
+                           HorizontalAlignment="Center"
+                           FontSize="24"
+                           FontFamily="Tahoma"
+                           Margin="5,5,5,5" />
+
+                <TextBox MaxHeight="400"
+                         MaxWidth="400"
+                         Margin="5, 5, 5, 5"
+                         Text="{Binding DiceName}"
+                         Style="{StaticResource TextBoxTheme}" />
+            </DockPanel>
+
+            <DockPanel>
+                <TextBlock TextWrapping="Wrap"
+                           Text="Количество граней:"
+                           HorizontalAlignment="Center"
+                           FontSize="24"
+                           FontFamily="Tahoma"
+                           Margin="5,5,5,5" />
+
+                <TextBox MaxHeight="400"
+                         MaxWidth="400"
+                         Margin="5, 5, 5, 5"
+                         Text="{Binding EdgeCount}"
+                         Style="{StaticResource TextBoxTheme}" />
+            </DockPanel>
+
+            <DockPanel LastChildFill="True">
+                <TextBlock Text="Номер грани"
+                           FontSize="24"
+                           FontFamily="Tahoma"
+                           Margin="5, 5, 5, 5" 
+                           DockPanel.Dock="Left"/>
+                
+                <TextBlock Text="Значение грани"
+                           FontSize="24"
+                           FontFamily="Tahoma"
+                           Margin="5, 5, 5, 5"
+                           DockPanel.Dock="Right"/>
+            </DockPanel>
+
+            <DockPanel>
+
+                <StackPanel Margin="10, 10, 10, 10">
+
+                    <ItemsControl ItemsSource="{Binding EdgeVMs}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </StackPanel>
+
+            </DockPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
+

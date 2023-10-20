@@ -13,36 +13,36 @@
                 <ResourceDictionary Source="Data/Themes/TextBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <DataTemplate DataType="{x:Type viewModel:BaseElementViewModel}">
-            <view:BaseElementView/>
+            <DataTemplate DataType="{x:Type viewModel:TermViewModel}">
+                <view:TermView />
         </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:BasePageViewModel}">
-                <view:BasePage/>
+            <DataTemplate DataType="{x:Type viewModel:TermsViewModel}">
+                <view:TermsView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:BaseElementButtonViewModel}">
-            <view:BaseElementButtonView/>
+            <DataTemplate DataType="{x:Type viewModel:TermButtonViewModel}">
+                <view:TermButtonView />
         </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:DicePageViewModel}">
-                <view:DicePage/>
+            <DataTemplate DataType="{x:Type viewModel:DicesViewModel}">
+                <view:DicesView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:StaticElementViewModel}">
-            <view:StaticElementView/>
+            <DataTemplate DataType="{x:Type viewModel:TermComponentViewModel}">
+                <view:TermComponentView />
         </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:EdgeViewModel}">
-                <view:EdgeView />
+            <DataTemplate DataType="{x:Type viewModel:DiceEdgeViewModel}">
+                <view:DiceEdgeView />
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:DiceElementViewModel}">
-                <view:DiceElementView />
+            <DataTemplate DataType="{x:Type viewModel:DiceViewModel}">
+                <view:DiceView />
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:DicePageButtonViewModel}">
-                <view:DicePageButtonView />
+            <DataTemplate DataType="{x:Type viewModel:DiceButtonViewModel}">
+                <view:DiceButtonView />
             </DataTemplate>
 
         </ResourceDictionary>

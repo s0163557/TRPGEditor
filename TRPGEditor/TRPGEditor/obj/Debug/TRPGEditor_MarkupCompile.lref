@@ -1,12 +1,12 @@
 ﻿
 FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\App.xaml;;
 FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\MainWindow.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\BaseElementButtonView.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\BaseElementView.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\BasePage.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DiceElementView.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DicePage.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DicePageButtonView.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\EdgeView.xaml;;
-FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\StaticElementView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\TermButtonView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\TermView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\TermsView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DiceView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DicesView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DiceButtonView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\DiceEdgeView.xaml;;
+FF:\Work\VS Repositories\TRPGEditor\TRPGEditor\TRPGEditor\Views\TermComponentView.xaml;;
 
