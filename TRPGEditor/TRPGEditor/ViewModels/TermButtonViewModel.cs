@@ -79,7 +79,7 @@ namespace TRPGEditor.ViewModels
             CurrentModel.SelectRadioButton(this);
         }
 
-        public void DeleteCommand(object obj)
+        public void DeleteCommand(int obj)
         {
             CurrentModel.DeleteButtonAction(this);
         }

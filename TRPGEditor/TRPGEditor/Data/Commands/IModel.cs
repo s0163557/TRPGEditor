@@ -12,6 +12,6 @@ namespace TRPGEditor.Data.Commands
         //По хорошему, тут должен быть не object а какой-нибудь родительский интерфейс всех ViewModel
         //но я пока не уверен, что там должно быть, поэтому отложу до поры до времени
         void SelectRadioButton(object Sender);
-        void DeleteButtonAction(object Sender);
+        void DeleteButtonAction(int ID);
     }
 }

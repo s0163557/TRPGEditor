@@ -13,21 +13,32 @@ namespace TRPGEditor.Models
 {
     public class Dice
     {
-        string name;
-        int edgeCount;
+        private long _id;
+        string name = "Кубик";
+        int edgeCount = 0;
+        List<string> edgeContent = new List<string>();
+
+        public Dice(long id) 
+        {
+            _id = id;
+        }
 
     }
 
     internal class DiceModel : ObservableClass, IModel
-    {
-
-    private static DiceModel _diceModel;
-        public ObservableCollection<DiceButtonViewModel> DiceButtonVMs { get; }
+    { 
+        private static DiceModel _diceModel;
+        //Тут будут храниться ссылки на вьюмодльки, за которыми мы будем подглядывать.
+        public ObservableCollection<DiceButtonViewModel> DiceButtonVMs
             = new ObservableCollection<DiceButtonViewModel>();
+
+        public ObservableCollection<DiceViewModel> DiceVMs { get; }
+            = new ObservableCollection<DiceViewModel>();
+
         public DiceViewModel CurrentDiceVM;
 
-        public List<string> DiceNames;
-
+        private long _newDiceID = 0;
+        public Dictionary<long, Dice> DiceData = new Dictionary<long, Dice>();
 
         private DiceModel() { }
 
@@ -40,13 +51,22 @@ namespace TRPGEditor.Models
 
         public void AddButtonAction()
         {
-            DiceButtonVMs.Add(new DiceButtonViewModel(this));
+            DiceData.Add(_newDiceID, new Dice(_newDiceID));
+            DiceButtonVMs.Add(new DiceButtonViewModel(_diceModel, _newDiceID));
+            DiceVMs.Add(new DiceButtonViewModel(_diceModel, _newDiceID));
+            _newDiceID++;
         }
 
-        public void DeleteButtonAction(object Sender)
+        public void AddEdgeAction()
         {
-            DiceButtonViewModel sender = Sender as DiceButtonViewModel;
-            DiceButtonVMs.Remove(sender);
+            DiceData.Add(_newDiceID, new Dice(_newDiceID));
+            DiceButtonVMs.Add(new DiceButtonViewModel(_diceModel, _newDiceID));
+            _newDiceID++;
+        }
+
+        public void DeleteButtonAction(int ID)
+        {
+            DiceData.Remove(ID);
             OnPropertyChanged();
         }
 

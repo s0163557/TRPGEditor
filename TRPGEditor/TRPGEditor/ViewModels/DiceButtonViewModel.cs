@@ -56,7 +56,7 @@ namespace TRPGEditor.ViewModels
             }
         }
 
-        public DiceButtonViewModel(IModel parentModel)
+        public DiceButtonViewModel(IModel parentModel, long ID)
         {
             DiceVM = new DiceViewModel();
             ButtonContent = DiceVM.DiceName;
